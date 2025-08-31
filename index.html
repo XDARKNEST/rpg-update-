@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Adventure RPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="login-page" class="container">
+  <h1>🔑 Login RPG</h1>
+  <div id="login-form">
+    <input type="text" id="login-username" placeholder="Username"><br>
+    <input type="password" id="login-password" placeholder="Password"><br>
+    <button class="btn" onclick="login()">Login</button>
+  </div>
+  <hr>
+  <h3>🆕 Buat Akun</h3>
+  <div id="register-form">
+    <input type="text" id="reg-username" placeholder="Username"><br>
+    <input type="password" id="reg-password" placeholder="Password"><br>
+    <button class="btn" onclick="register()">Create Akun</button>
+  </div>
+  <div id="login-msg"></div>
+</div>
+
+<!-- GAME PAGE -->
+<div id="game-page" class="container" style="display:none;">
+  <h1>⚔️ Adventure RPG</h1>
+  <div id="status"></div>
+
+  <div class="btn-group">
+    <button class="btn" onclick="explore()">🌲 Explore</button>
+    <button class="btn" onclick="attack(true)">⚔️ Attack</button>
+    <button class="btn" onclick="attack(false)">💥 Special Attack</button>
+    <button class="btn" onclick="defend()">🛡️ Defend</button>
+    <button class="btn" onclick="openInventory()">🎒 Inventory</button>
+    <button class="btn" onclick="openShop()">🏪 Shop</button>
+    <button class="btn" onclick="recruitMember('Knight', 60, 8)">🤝 Recruit Knight</button>
+    <button class="btn" onclick="recruitMember('Mage', 40, 12)">🤝 Recruit Mage</button>
+    <button class="btn" onclick="saveGame()">💾 Save</button>
+    <button class="btn" onclick="loadGame()">📂 Load</button>
+    <button class="btn" onclick="logout()">🚪 Logout</button>
+  </div>
+
+  <div id="log"></div>
+
+  <div id="shop">
+    <h3>🏪 Shop</h3>
+    <div id="shop-items"></div>
+    <button class="btn" onclick="closeShop()">Tutup</button>
+  </div>
+
+  <div id="inventory">
+    <h3>🎒 Inventory</h3>
+    <div id="inventory-items"></div>
+    <button class="btn" onclick="closeInventory()">Tutup</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
