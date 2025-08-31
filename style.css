@@ -1,0 +1,101 @@
+body { 
+  font-family: Arial, sans-serif; 
+  background:#111; 
+  color:#eee; 
+  padding:20px; 
+  margin:0; 
+  display:flex; 
+  justify-content:center;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: #00000030;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+  box-sizing: border-box;
+}
+
+h1 { 
+  text-align:center; 
+  margin-top:0;
+  font-size: 20px;
+}
+
+.btn { 
+  margin:5px; 
+  padding:10px; 
+  cursor:pointer; 
+  background:#444; 
+  color:#fff; 
+  border:none; 
+  border-radius:5px; 
+  font-size:14px;
+  flex: 1 1 45%;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px;
+  margin: 5px 0;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #222;
+  color: #eee;
+}
+
+.bar-container { 
+  width:100%; 
+  height:15px; 
+  background:#333; 
+  border-radius:5px; 
+  overflow:hidden; 
+  margin:3px 0; 
+}
+.bar { height:100%; }
+.hp-player { background:#f00; }
+.hp-enemy { background:#0f0; }
+.exp-bar { background:#0af; }
+
+#status {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#log { 
+  background:#222; 
+  padding:10px; 
+  height:200px; 
+  overflow:auto; 
+  margin-top:10px; 
+  border-radius:5px; 
+  font-size:14px;
+}
+
+#shop, #inventory { 
+  display:none; 
+  background:#222; 
+  padding:10px; 
+  margin-top:10px; 
+  border-radius:5px; 
+  font-size: 14px;
+}
+
+/* Rarity colors */
+.rarity-common { color: #ccc; }
+.rarity-rare   { color: #4da6ff; }
+.rarity-epic   { color: #b84dff; }
+
+@media (max-width: 480px) {
+  .btn { flex: 1 1 100%; }
+}
